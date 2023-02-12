@@ -1,0 +1,185 @@
+html {
+    width: 100%;
+    height: 100%;
+    --bg-color: #d6d3d1;
+    --main-color: #f5f5f4;
+    --accent-color: #78716c;
+    --shadow-color: #a3a3a3;
+    --text-color: #78716c;
+
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 3fr;
+    width: 80%;
+    height: 700px;
+    gap: 20px;
+    position: relative;
+}
+
+.library, .formContainer {
+    background-color: var(--main-color);
+    box-shadow: 0 0 .5em .5em var(--shadow-color);
+}
+
+.library {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+}
+
+.bookContainer {
+    height: 600px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow:auto;
+}
+
+.bookHeader {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    position: relative;
+}
+
+#addBtn {
+    position: absolute;
+    top: 35%;
+    right: 5px;
+    width: 250px;
+    font-size: 1.1em;
+    background-color: var(--bg-color);
+    border: none;
+    font-weight: bolder;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.book {
+    height: 250px;
+    width: 200px;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 5px .3em .3em var(--shadow-color);
+}
+
+.book > h3{
+    margin: 0;
+    font-weight: bolder;
+    color: var(--main-color);
+    width: 80%;
+    border-bottom: 2px solid white;
+}
+
+.book > h4 {
+    margin: 2%;
+    width: 80%;
+    color: white;
+}
+
+.book button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    margin: 3px;
+    margin-top: 15px;
+}
+
+.book button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    position: relative;
+    visibility: hidden;
+}
+
+.formBoxContainer {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr) 30% 20%;
+    color: var(--text-color);
+}
+
+.formHeader {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.formBox:nth-child(5) > label {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1.2em;
+}
+
+.formBox:nth-child(5) {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20%;
+ 
+}
+
+.formBox > span {
+    width: 60%;
+}
+
+.inputItem {
+    height: 20px;
+}
+
+#validate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    visibility: hidden;
+}
+
+#validateMessage, #validateMessage + h3 {
+    color: red;
+    margin: 0;
+}
+
+#submitBtn {
+    height: 30px;
+    font-weight: bolder;
+    font-size: 1em;
+    color: white;
+    border: 3px solid black;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}

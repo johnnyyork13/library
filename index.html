@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer" id="mainContainer">
+        <div class="library">
+            <div class="bookHeader">
+                <h1>Library</h1>
+                <button type="button" id="addBtn">OPEN ACTIONS > > ></button>
+            </div>
+            <div class="bookContainer" id="bookContainer"></div>
+        </div>
+        <form class="formContainer" id="formContainer">
+            <div class="formHeader">
+                <h1>Add Book</h1>
+            </div>
+            <div class="formBoxContainer">
+                <div class="formBox">
+                    <label for="title" id="titleLabel" value="Title:">TITLE</label>
+                    <input type="text" id="title" class="inputItem">
+                </div>
+                <div class="formBox">
+                    <label for="author" id="authorLabel">AUTHOR</label>
+                    <input type="text" id="author" class="inputItem">
+                </div>
+                <div class="formBox">
+                    <label for="pages" id="pagesLabel">PAGES</label>
+                    <input type="number" id="pages" class="inputItem">
+                </div>
+                <div class="formBox">
+                    <label>STATUS</label>
+                    <span>
+                        <input type="radio" class="read" name="read" value="Read">
+                        <label for="radioYes">Read</label>
+                    </span>
+                    <span>
+                        <input type="radio" class="read" name="read" value="Unread" checked>
+                        <label for="radioNo">Unread</label>
+                    </span>
+                </div>
+                <div id="validate">
+                    <h3 id="validateMessage">Missing </h3>
+                    <h3>Please fill out all fields!</h3>
+                </div>
+                <div class="formBox">
+                    <button type="submit" id="submitBtn">Add Book</button>
+                </div>
+            </div>
+        <form>
+    </div>
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
