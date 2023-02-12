@@ -47,8 +47,8 @@ function showBooks() {
     let book = bookArray[bookArray.length - 1];
     
     for (const props in book) {
-        let eName = document.createElement('h3');
-        let e = document.createElement('h4');
+        let eName = document.createElement('p');
+        let e = document.createElement('p');
 
         eName.textContent = props.toUpperCase();
         e.textContent = book[props];
@@ -148,11 +148,11 @@ submitBtn.addEventListener('click', function(e){
 
 addBtn.addEventListener('click', function(){
     if (formContainer.style.visibility === 'visible') {
-        this.textContent = 'OPEN ACTIONS > > >';
+        this.textContent = 'ADD BOOK +';
         mainContainer.style.gridTemplateColumns = "3fr";
         formContainer.style.visibility = 'hidden';
     } else {
-        this.textContent = "CLOSE ACTIONS < < <";
+        this.textContent = "ADD BOOK -";
         mainContainer.style.gridTemplateColumns = "3fr 1fr";
         formContainer.style.visibility = 'visible';
     }
